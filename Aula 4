@@ -61,3 +61,109 @@ def menu():
 
 # Executa o menu
 menu()
+
+
+Prompt 2:
+# Sistema simples de cadastro e login de clientes
+# Objetivo: permitir que usuários se cadastrem e façam login
+# Inclui tratamento de erros para entradas inválidas e situações comuns
+
+# Dicionário para armazenar usuários cadastrados
+# A chave será o "username" e o valor será a "senha"
+usuarios = {}
+
+def cadastrar_usuario():
+    """
+    Função para cadastrar um novo usuário.
+    Inclui tratamento de erros para entradas inválidas.
+    """
+    try:
+        username = input("Digite um nome de usuário: ").strip()
+        
+        # Verifica se o nome de usuário está vazio
+        if not username:
+            raise ValueError("O nome de usuário não pode ser vazio.")
+        
+        # Verifica se o usuário já existe
+        if username in usuarios:
+            raise ValueError("Este nome de usuário já está cadastrado.")
+        
+        senha = input("Digite uma senha: ").strip()
+        
+        # Verifica se a senha está vazia
+        if not senha:
+            raise ValueError("A senha não pode ser vazia.")
+        
+        # Verifica se a senha tem pelo menos 4 caracteres
+        if len(senha) < 4:
+            raise ValueError("A senha deve ter pelo menos 4 caracteres.")
+        
+        # Se tudo estiver correto, salva no dicionário
+        usuarios[username] = senha
+        print(f"Usuário '{username}' cadastrado com sucesso!")
+    
+    except ValueError as ve:
+        print(f"Erro de cadastro: {ve}")
+    except Exception as e:
+        # Captura qualquer outro erro inesperado
+        print(f"Ocorreu um erro inesperado: {e}")
+
+
+def login_usuario():
+    """
+    Função para realizar login de um usuário já cadastrado.
+    Inclui tratamento de erros para entradas inválidas.
+    """
+    try:
+        username = input("Digite seu nome de usuário: ").strip()
+        
+        # Verifica se o usuário existe
+        if username not in usuarios:
+            raise ValueError("Usuário não encontrado. Cadastre-se primeiro.")
+        
+        senha = input("Digite sua senha: ").strip()
+        
+        # Verifica se a senha está correta
+        if usuarios[username] != senha:
+            raise ValueError("Senha incorreta. Tente novamente.")
+        
+        print(f"Login realizado com sucesso! Bem-vindo, {username}.")
+    
+    except ValueError as ve:
+        print(f"Erro de login: {ve}")
+    except Exception as e:
+        print(f"Ocorreu um erro inesperado: {e}")
+
+
+def menu():
+    """
+    Função principal que mostra o menu de opções.
+    """
+    while True:
+        print("\n--- MENU ---")
+        print("1 - Cadastrar usuário")
+        print("2 - Fazer login")
+        print("3 - Sair")
+        
+        try:
+            opcao = input("Escolha uma opção: ").strip()
+            
+            if opcao == "1":
+                cadastrar_usuario()
+            elif opcao == "2":
+                login_usuario()
+            elif opcao == "3":
+                print("Encerrando o sistema. Até logo!")
+                break
+            else:
+                raise ValueError("Opção inválida. Escolha 1, 2 ou 3.")
+        
+        except ValueError as ve:
+            print(f"Erro: {ve}")
+        except Exception as e:
+            print(f"Ocorreu um erro inesperado: {e}")
+
+
+# Executa o programa
+if __name__ == "__main__":
+    menu()
