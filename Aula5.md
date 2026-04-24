@@ -22,8 +22,12 @@ com linguagem respeitosa e tom conciliador”. Esse processo mostra como a engen
 solicitação do usuário e a resposta da IA.
 
 Etapa 3:
+Escreva uma carta romântica destinada à parceira de Theodore, expressando carinho e intimidade.
+Contexto: Theodore deseja transmitir sentimentos de amor e proximidade, como se fosse uma carta pessoal escrita por ele.
+Instrução: O texto deve ser emocional, delicado e íntimo, refletindo o estilo afetivo de Theodore.
+Formato: Carta pessoal, com saudação inicial, corpo do texto e despedida carinhosa.
+Exemplo: No estilo de Theodore, com linguagem poética e sensível, valorizando detalhes cotidianos e emoções.
+Limites: Não incluir linguagem ofensiva, informações excessivamente explícitas ou elementos que quebrem o tom romântico.
+
 Justificativa  
-Ao estruturar o prompt dessa forma, com contexto, instrução clara, formato definido, exemplo de estilo e limites, evitamos os atritos 
-vistos no filme Her. Isso porque a IA passa a ter parâmetros objetivos para seguir, reduzindo ambiguidades e mal-entendidos. 
-A clareza na solicitação garante que a resposta seja mais alinhada às expectativas do usuário, mostrando como a engenharia de prompt é
-essencial para transformar pedidos vagos em interações produtivas e precisas.
+Ao reestruturar o pedido de Theodore dessa forma, garantimos que a IA compreenda claramente o objetivo e o tom desejado, evitando ambiguidades como as vistas no filme Her. A definição de contexto, instrução, formato, exemplo e limites orienta a produção da carta para que ela seja fiel ao estilo emocional de Theodore, mas sem riscos de interpretações equivocadas. Isso mostra como a engenharia de prompt transforma uma solicitação vaga em uma instrução precisa e eficaz.
